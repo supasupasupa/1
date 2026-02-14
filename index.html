@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Shift: Puppet Watch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="office-view" id="officeView">
+        <div class="scan-lines"></div>
+        <h1>Night Shift: Puppet Watch</h1>
+        <p class="instruction">Survive until 6 AM. Keep the puppet box wound through the camera system.</p>
+        <div class="status-row">
+          <span id="timeText">12:00 AM</span>
+          <span id="powerText">Power: 100%</span>
+          <span id="windText">Music Box: 100%</span>
+        </div>
+        <div class="threat" id="threatText">Threat: Low</div>
+        <button id="cameraToggle" class="action-btn">Open Cameras</button>
+      </section>
+
+      <section class="camera-overlay hidden" id="cameraOverlay">
+        <header>
+          <h2>Security Cameras</h2>
+          <button id="closeCamera" class="action-btn">Lower Monitor</button>
+        </header>
+
+        <div class="camera-feed" id="cameraFeed">
+          <div class="camera-label" id="cameraLabel">CAM 01 - Party Hall</div>
+          <p id="cameraFlavor">Tables are empty. Balloons drift in stale air.</p>
+        </div>
+
+        <nav class="camera-grid" id="cameraGrid"></nav>
+
+        <div class="music-box-panel" id="musicBoxPanel">
+          <h3>Prize Corner - Music Box</h3>
+          <p>Hold to wind. If it reaches 0%, the puppet gets out.</p>
+          <button id="windButton" class="wind-btn">Hold to Wind</button>
+        </div>
+      </section>
+
+      <section class="end-overlay hidden" id="endOverlay">
+        <h2 id="endTitle">You Survived</h2>
+        <p id="endMessage"></p>
+        <button id="restartButton" class="action-btn">Play Again</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
